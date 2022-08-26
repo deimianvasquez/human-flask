@@ -9,6 +9,11 @@ class Human(db.Model):
     email = db.Column(db.String, unique=True, nullable=False)
 
 
+    @classmethod
+    def create(self):
+        pass
+
+
     def serialize(self):
         return {
             "id": self.id,
